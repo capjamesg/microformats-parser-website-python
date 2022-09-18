@@ -11,6 +11,8 @@ app = Flask(__name__)
 
 mf2py.Parser.user_agent = 'mf2.kylewm.com (mf2py v' + mf2py.__version__ + ')'
 mf2py.Parser.dict_class = collections.OrderedDict
+# Enable experimental support for showing image alt tags https://github.com/microformats/mf2py#experimental-features
+mf2py.Parser.img_with_alt = True
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
